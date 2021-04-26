@@ -4,19 +4,19 @@
 3. values added: 20
 4. ReferenceError: result is not defined. Because `result` is defined with the `let` keyword, its scope only exists in the if block. Thus, it throws a reference error when it attempts to refer back to the same variable from outside the if block
 5. TypeError: Assignment to constant variable. Because `result` is defined with `const` keyword, it throws an error when it is modified in line 7. Hence the error
-6. Line 13 does not execute because line 7 throws an error
+6. Line 13 does not execute because line 7 throws an error as described in 5
 
 # Part 1b
-1. Prints the then value of `i` to the console which is `3`
-2. Prints the list `discounted` to the console which is `[50,100,150]`
-3. Prints the then value of `finalPrice` to the console which is `150`
+1. `3`. Prints the then value of `i` to the console which is `3`. Value of `i` is `3` here because the for loop increements `i` until it is greater than or equal to `prices.length` which is also `3`. 
+2. `150`. Prints the last `discountedPrice` which is 150. This is because `discountedPrice` gets updated in every iteration of the for loop to the original price substracted by the total discount. The last `discountedPrice` would be the discounted price updated in the last iteration of the for loop which is for the last `i` (i.e., `3`).
+3. `150`. Prints the last `finalPrice` which is 150. This is because `finalPrice` is updated to the nearest 2 decimal value of `discountedPrice` every iteration. For the final iteration (for i = 3), `discountedPrice` is 150 which is why `finalPrice` is 150 too. 
 4. This function returns `[50,100,150]` which is the list `discounted` containing the discounted prices as per the arguments. The function applies the `discount` to each price in `price`, then rounds it down to the nearest two decimals and stores this `finalPrice` in the `discounted` list which is returned at the end. 
 5. ReferenceError: i is not defined. Line 12 attempts to access the variable `i` but since `i` is defined using the keyword `let` inside the for loop block, it is not defined outside the loop. Hence, the reference error
 6. ReferenceError: discountedPrice is not defined. Again, line 13 attempts to access a variable `discountedPrice` (defined using `let` inside for loop) whose scope lies within the for loop block. 
 7. Line 14 prints `150`, the then value of `finalPrice`. It is the final discounted price of the last last proce in the `prices` list obtained after applying the discount and rounding it down. 
 8. The function returns `[50,100,150]` which is the list `discounted` containing the final prices for each price in `prices` obtained after applying teh discount and rounding it down. 
 9. ReferenceError: i is not defined. Line 11 attempts to access the variable `i` but since `i` is defined using the keyword `let` inside the for loop block, it is not defined outside the loop. Hence, the reference error.
-10. Line 12 prints the value stored in `length` which is `3`. This value is equal to the length of the input `prices` list. 
+10. `3`. Line 12 prints the value stored in `length` which is `3`. This value is equal to the length of the input `prices` list. 
 11. This function returns `[50,100,150]` which is the list of discounedt prices `discounted`. Though in this case it does not round the discounted prices down to two decimal places, it does not affect the output for this set of input. 
 12. Answers:
     A. `student.name`
